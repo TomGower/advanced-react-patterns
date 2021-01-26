@@ -49,7 +49,7 @@ function useOnChangeReadOnlyWarning(
   initialValueProp,
   onChangeProp
 ) {
-  const isControlled = controlPropValue || null
+  const isControlled = controlPropValue != null
   React.useEffect(() => {
     warning(
       !(!hasOnChange && isControlled && !readOnly),
